@@ -231,7 +231,7 @@ int deferredPublish(int sock, char *topic, char *msg, size_t msg_len, int defer_
     buf[ofs] = ' ';
     ofs+=1;
     // write defer_time
-    int defer_len = sprintf(&buf[ofs], "%lld", defer_time);
+    int defer_len = sprintf(&buf[ofs], "%d", defer_time);
     ofs+=defer_len;
     // write command delimiter
     buf[ofs] = '\n';
